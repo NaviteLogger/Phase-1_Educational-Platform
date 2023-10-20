@@ -71,3 +71,41 @@ python run.py
 ```
 
 ## Usage
+
+1. Open your browser and go to `http://localhost:5000/`
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the project
+
+2. Create your feature branch
+
+```sh
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes
+
+```sh
+git commit -m 'Add some AmazingFeature'
+```
+
+4. Push to the branch
+
+```sh
+git push origin feature/AmazingFeature
+```
+
+5. Open a pull request
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+## Contact
+
+- [Email](mailto:kacprzakmarek92@gmail.com)
+
+## Acknowledgements

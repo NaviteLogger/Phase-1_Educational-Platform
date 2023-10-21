@@ -1,5 +1,5 @@
 # This is the main file that will be used to run the application
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template
 
 app = Flask(__name__)
 

@@ -161,3 +161,7 @@ cython_debug/
 .idea
 .vscode/
 .vscode
+
+# Ignore database certificate files
+*.pem
+*.crt

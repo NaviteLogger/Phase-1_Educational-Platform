@@ -1,4 +1,5 @@
 # Educational Platform
+# Chuj ci w dupe hjahahha
 
 A place where everyone can learn programming and topics related to IT.
 

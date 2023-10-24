@@ -1,18 +1,8 @@
 # This is the main file that will be used to run the application
-from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+from flask import Flask
 
-
-@app.route("/")
-def hello_world():
-    return "Hello World!"
-
-
-@app.route("/hello/<name>")
-def hello(name):
-    return render_template("base.html", name=name)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+def create_app(test_config=None):
+    # create and configure the app
+    

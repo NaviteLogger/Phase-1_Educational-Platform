@@ -1,0 +1,1 @@
+# This is the config file that will link .env variables to the app.

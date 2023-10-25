@@ -29,10 +29,12 @@ def create_app(test_config=None):
     )
 
     # Load the instance config, if it exists, with testing configuration
-    if test_config is None:
-        app.config.from_pyfile('config.py', silent=True)
-    else:
-        app.config.from_mapping(test_config)
+    if app.config['ENV'] == 'development':
+        app.config.from_object('config.DevelopmentConfig')
+    elif app.config['ENV'] == 'testing':
+        app.config.from_object('config.TestingConfig')
+    elif app.config['ENV'] == 'production':
+        app.config.from_object('config.ProductionConfig')
 
     # Ensure the instance folder exists
     try:

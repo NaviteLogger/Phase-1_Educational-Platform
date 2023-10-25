@@ -13,4 +13,4 @@ packaging==23.2
 python-dotenv==1.0.0
 SQLAlchemy==2.0.22
 typing_extensions==4.8.0
-Werkzeug==3.0.0
+Werkzeug==3.0.1

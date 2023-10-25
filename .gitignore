@@ -165,6 +165,3 @@ cython_debug/
 # Ignore database certificate files
 *.pem
 *.crt
-
-# Ignore the config files
-config.py

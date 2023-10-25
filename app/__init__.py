@@ -21,11 +21,12 @@ configurations. This is particularly useful for:
 - Facilitating unit testing by easily allowing the creation of a fresh app instance for each test.
 '''
 def create_app(test_config=None):
-    app = Flask(__name__, instance_relative_config=True) # The instance_relative_config argument tells Flask that configuration files are relative to the instance folder, which is a location Flask provides to safely store instance-specific resources
+    # Create and configure the app
+    app = Flask(__name__)
 
     # Default config
     app.config.from_mapping(
-        SECRET_KEY=os.getenv('SECRET_KEY')
+        SECRET_KEY=os.getenv('SECRET_KEY', 'your_secret_key')
     )
 
     # Load the instance config, if it exists, with testing configuration

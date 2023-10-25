@@ -24,19 +24,19 @@ def create_app(test_config=None):
     # Create and configure the app
     app = Flask(__name__)
 
-    # Load the selected config file
-    if app.config['ENV'] == 'development':
-        app.config.from_object('config.DevelopmentConfig')
-    elif app.config['ENV'] == 'testing':
-        app.config.from_object('config.TestingConfig')
-    elif app.config['ENV'] == 'production':
-        app.config.from_object('config.ProductionConfig')
-
     # Ensure the instance folder exists
     try:
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    # Load the selected config file
+    if app.config['ENV'] == 'development':
+        app.config.from_object('instance.config.DevelopmentConfig')
+    elif app.config['ENV'] == 'testing':
+        app.config.from_object('instance.config.TestingConfig')
+    elif app.config['ENV'] == 'production':
+        app.config.from_object('instance.config.ProductionConfig')
 
     # Initialize the extensions
     db.init_app(app)

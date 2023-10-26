@@ -30,7 +30,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # Load the selected config file
+    # Load the selected config file from the instance folder
     if app.config['ENV'] == 'development':
         app.config.from_object('instance.config.DevelopmentConfig')
     elif app.config['ENV'] == 'testing':

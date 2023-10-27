@@ -6,8 +6,6 @@ class Config:
     BASEDIR = os.path.abspath(os.path.dirname(__file__))
     # Databace connection (common to all environments)
     MYSQL_HOST = os.getenv('MYSQL_HOST')
-    MYSQL_USER = os.getenv('MYSQL_USER')
-    MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
     MYSQL_PORT = os.getenv('MYSQL_PORT')
     SECRET_KEY = os.getenv('DEFAULT_SECRET_KEY')
     DEBUG = False
@@ -21,11 +19,12 @@ class DevelopmentConfig(Config):
     TESTING = True
 
 class TestingConfig(Config):
-    SECRET_KEY = os.getenv('TEST_SECRET_KEY')
+    # Testing-specific configuration
     DEBUG = True
     TESTING = True
 
 class ProductionConfig(Config):
+    # Production-specific configuration
     SECRET_KEY = os.getenv('PROD_SECRET_KEY')
     DEBUG = False
     TESTING = False

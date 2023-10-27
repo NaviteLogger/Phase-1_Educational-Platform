@@ -1,7 +1,6 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -9,7 +8,6 @@ load_dotenv()
 
 # Initialize the extensions here, outside of the create_app function
 db = SQLAlchemy()
-login_manager = LoginManager()
 
 '''
 The "Application Factory" (in this case the 'create_app' function) is a 

@@ -38,7 +38,6 @@ def create_app(test_config=None):
 
     # Initialize the extensions
     db.init_app(app)
-    login_manager.init_app(app)
 
     # Import and register the blueprints
     from . import auth

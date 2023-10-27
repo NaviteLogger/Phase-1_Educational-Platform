@@ -32,11 +32,11 @@ def create_app(test_config=None):
 
     # Load the selected config file from the instance folder
     if app.config['ENV'] == 'development':
-        app.config.from_object('instance.config.DevelopmentConfig')
+        app.config.from_object('app.config.DevelopmentConfig')
     elif app.config['ENV'] == 'testing':
-        app.config.from_object('instance.config.TestingConfig')
+        app.config.from_object('app.config.TestingConfig')
     elif app.config['ENV'] == 'production':
-        app.config.from_object('instance.config.ProductionConfig')
+        app.config.from_object('app.config.ProductionConfig')
 
     # Initialize the extensions
     db.init_app(app)

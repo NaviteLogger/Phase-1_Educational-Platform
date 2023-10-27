@@ -29,12 +29,16 @@ def create_app(test_config=None):
         pass
 
     # Load the selected config file from the instance folder
-    if app.config['ENV'] == 'DevelopmentConfig':
+    if os.environ.get('FLASK_ENV') == 'development':
         app.config.from_object('app.config.DevelopmentConfig')
-    elif app.config['ENV'] == 'TestingConfig':
+        app.config.from_pyfile('development_config.py')
+    elif os.environ.get('FLASK_ENV') == 'testing':
         app.config.from_object('app.config.TestingConfig')
-    elif app.config['ENV'] == 'ProductionConfig':
+        app.config.from_pyfile('testing_config.py')
+    elif os.environ.get('FLASK_ENV') == 'production':
         app.config.from_object('app.config.ProductionConfig')
+        app.config.from_pyfile('production_config.py')
+
 
     # Initialize the extensions
     db.init_app(app)

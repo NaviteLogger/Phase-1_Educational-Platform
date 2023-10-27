@@ -13,8 +13,6 @@ class Config:
 
 class DevelopmentConfig(Config):
     # Development-specific configuration
-    MYSQL_DB = os.getenv('MYSQL_DB')
-    SECRET_KEY = os.getenv('DEV_SECRET_KEY')
     DEBUG = True
     TESTING = True
 
@@ -25,6 +23,5 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     # Production-specific configuration
-    SECRET_KEY = os.getenv('PROD_SECRET_KEY')
     DEBUG = False
     TESTING = False

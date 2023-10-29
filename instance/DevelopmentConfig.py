@@ -1,17 +1,11 @@
-# This is the config file that will link .env variables to the app.
 import os
-from dotenv import load_dotenv
 
-# The base directory of the project
-BASEDIR = os.path.abspath(os.path.dirname(__file__))
+DEV_SECRET_KEY = os.getenv('DEV_SECRET_KEY')
 
-# General config
-SECRET_KEY = os.urandom(32) # Generate a random secret key
-DEBUG = True
-
-# MySQL database config
 MYSQL_HOST = os.getenv('MYSQL_HOST')
-MYSQL_USER = os.getenv('MYSQL_USER')
-MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
-MYSQL_DB = os.getenv('MYSQL_DB')
 MYSQL_PORT = os.getenv('MYSQL_PORT')
+MYSQL_PASSWORD_DEV = os.getenv('MYSQL_PASSWORD_DEV')
+MYSQL_DB_DEV = os.getenv('MYSQL_DB_DEV')
+MYSQL_USER_DEV = os.getenv('MYSQL_USER_DEV')
+
+SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_DEV}:{MYSQL_PASSWORD_DEV}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB_DEV}?ssl-mode=REQUIRED'

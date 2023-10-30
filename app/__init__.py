@@ -40,7 +40,7 @@ def create_app(test_config=None):
         app.config.from_pyfile('productionConfig.py')
 
 
-    # Initialize the database
+    # Initialize the database along with extensions
     db.init_app(app)
 
     # Import and register the blueprints

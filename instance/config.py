@@ -21,7 +21,7 @@ class DevelopmentConfig(Config):
     MYSQL_PASSWORD_DEV = os.getenv('MYSQL_PASSWORD_DEV')
     MYSQL_DB_DEV = os.getenv('MYSQL_DB_DEV')
     MYSQL_USER_DEV = os.getenv('MYSQL_USER_DEV')
-    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_DEV}:{MYSQL_PASSWORD_DEV}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB_DEV}?ssl-mode=REQUIRED'
+    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_DEV}:{MYSQL_PASSWORD_DEV}@{Config.MYSQL_HOST}:{Config.MYSQL_PORT}/{MYSQL_DB_DEV}?ssl-mode=REQUIRED'
 
 class TestingConfig(Config):
     # Testing-specific configuration
@@ -31,7 +31,7 @@ class TestingConfig(Config):
     MYSQL_PASSWORD_TEST = os.getenv('MYSQL_PASSWORD_TEST')
     MYSQL_DB_TEST = os.getenv('MYSQL_DB_TEST')
     MYSQL_USER_TEST = os.getenv('MYSQL_USER_TEST')
-    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_TEST}:{MYSQL_PASSWORD_TEST}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB_TEST}?ssl-mode=REQUIRED'
+    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_TEST}:{MYSQL_PASSWORD_TEST}@{Config.MYSQL_HOST}:{Config.MYSQL_PORT}/{MYSQL_DB_TEST}?ssl-mode=REQUIRED'
 
 class ProductionConfig(Config):
     # Production-specific configuration
@@ -41,4 +41,4 @@ class ProductionConfig(Config):
     MYSQL_PASSWORD_PROD = os.getenv('MYSQL_PASSWORD_PROD')
     MYSQL_DB_PROD = os.getenv('MYSQL_DB_PROD')
     MYSQL_USER_PROD = os.getenv('MYSQL_USER_PROD')
-    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_PROD}:{MYSQL_PASSWORD_PROD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB_PROD}?ssl-mode=REQUIRED'
+    SQLALCHEMY_DATABASE_URI = f'mysql://{MYSQL_USER_PROD}:{MYSQL_PASSWORD_PROD}@{Config.MYSQL_HOST}:{Config.MYSQL_PORT}/{MYSQL_DB_PROD}?ssl-mode=REQUIRED'

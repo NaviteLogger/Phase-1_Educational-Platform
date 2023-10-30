@@ -28,17 +28,16 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # Load the selected config file from the instance folder
-    if os.environ.get('FLASK_ENV') == 'development':
-        app.config.from_object('app.config.DevelopmentConfig')
-        app.config.from_pyfile('developmentConfig.py')
-    elif os.environ.get('FLASK_ENV') == 'testing':
-        app.config.from_object('app.config.TestingConfig')
-        app.config.from_pyfile('testingConfig.py')
-    elif os.environ.get('FLASK_ENV') == 'production':
-        app.config.from_object('app.config.ProductionConfig')
-        app.config.from_pyfile('productionConfig.py')
+    # Set the default config file
+    env = os.environ.get('FLASK_ENV', 'production') # Default to production
 
+    # Load the selected config file
+    if env == 'development':
+        app.config.from_object('app.config.DevelopmentConfig')
+    elif env == 'testing':
+        app.config.from_object('app.config.TestingConfig')
+    else: # Production
+        app.config.from_object('app.config.ProductionConfig')
 
     # Initialize the database along with extensions
     db.init_app(app)

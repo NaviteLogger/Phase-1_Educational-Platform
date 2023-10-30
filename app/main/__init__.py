@@ -17,4 +17,8 @@ needs to know where it’s defined, so __name__ is passed as the second argument
 '''
 main = Blueprint('main', __name__,)
 
+# Import the routes module from the 'routes.py' file located in the same directory as this __init__.py file.
 from . import routes
+
+# Import the models module from the 'models.py' file located in the same directory as this __init__.py file.
+from . import models

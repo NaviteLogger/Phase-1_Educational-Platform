@@ -1,4 +1,8 @@
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 TEST_SECRET_KEY = os.getenv('TEST_SECRET_KEY')
 

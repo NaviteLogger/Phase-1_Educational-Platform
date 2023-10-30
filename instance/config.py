@@ -1,6 +1,9 @@
 import os
 from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
 class Config:
     # The base directory of the project
     BASEDIR = os.path.abspath(os.path.dirname(__file__))

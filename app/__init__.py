@@ -32,12 +32,16 @@ def create_app(test_config=None):
     env = os.environ.get('FLASK_ENV', 'production') # Default to production
 
     # Load the selected config file
-    if env == 'development':
-        app.config.from_object('app.config.DevelopmentConfig')
-    elif env == 'testing':
-        app.config.from_object('app.config.TestingConfig')
-    else: # Production
-        app.config.from_object('app.config.ProductionConfig')
+    if os.environ.get('FLASK_ENV') == 'development':
+        app.config.from_object('instance.config.DevelopmentConfig')
+        # ...
+    elif os.environ.get('FLASK_ENV') == 'testing':
+        app.config.from_object('instance.config.TestingConfig')
+        # ...
+    elif os.environ.get('FLASK_ENV') == 'production':
+        app.config.from_object('instance.config.ProductionConfig')
+        # ...
+
 
     # Initialize the database along with extensions
     db.init_app(app)

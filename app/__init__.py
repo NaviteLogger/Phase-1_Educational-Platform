@@ -42,12 +42,7 @@ def create_app(test_config=None):
         app.config.from_object('instance.config.ProductionConfig')
         # ...
 
-
     # Initialize the database along with extensions
     db.init_app(app)
-
-    # Import and register the blueprints
-    from . import auth
-    app.register_blueprint(auth.bp)
 
     return app

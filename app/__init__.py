@@ -40,7 +40,7 @@ def create_app(test_config=None):
         # ...
 
     # Establish a connection to the database
-    engine = create_engine(app.config['POSTGRESQL_URI'], echo=True)
+    engine = create_engine(app.config['POSTGRESQL_URI'])
 
     # Test the database connection
     connection = engine.connect()

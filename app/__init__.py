@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -44,7 +44,7 @@ def create_app(test_config=None):
 
     # Test the database connection
     connection = engine.connect()
-    result = connection.execute('SELECT 1')
+    result = connection.execute(text("SELECT 1"))
     data = result.fetchall()
     print(data)
 

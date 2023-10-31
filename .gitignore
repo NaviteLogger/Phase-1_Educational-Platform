@@ -165,3 +165,7 @@ cython_debug/
 # Ignore database certificate files
 *.pem
 *.crt
+
+# Node modules
+node_modules/
+node_modules

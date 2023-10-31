@@ -42,4 +42,9 @@ def create_app(test_config=None):
     # Establish a connection to the database
     engine = create_engine(app.config['POSTGRESQL_URI'], echo=True)
 
+    # Test the database connection
+    with engine.connect() as connection:
+        result = connection.execute("SELECT 1")
+        print(result.fetchone())
+
     return app

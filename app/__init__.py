@@ -1,13 +1,10 @@
 import os
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-
-# Initialize the extensions here, outside of the create_app function
-db = SQLAlchemy()
 
 '''
 The "Application Factory" (in this case the 'create_app' function) is a 
@@ -42,7 +39,7 @@ def create_app(test_config=None):
         app.config.from_object('instance.config.ProductionConfig')
         # ...
 
-    # Initialize the database along with extensions
-    db.init_app(app)
+    # Establish a connection to the database
+    engine = create_engine(app.config['POSTGRESQL_URI'], echo=True)
 
     return app

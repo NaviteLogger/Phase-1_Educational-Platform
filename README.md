@@ -28,7 +28,7 @@ To get a local copy up and running follow these simple steps.
 
 - [Python](https://www.python.org/downloads/)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/)
-- [MySQL](https://dev.mysql.com/downloads/installer/)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
 ### Installation
 
@@ -47,21 +47,21 @@ pip install -r requirements.txt
 3. Create a database
 
 ```sh
-mysql -u root -p
+psql -U your_username
 ```
 
 ```sql
-CREATE DATABASE educational_platform;
+CREATE DATABASE educationalPlatform;
 ```
 
 4. Create a `.env` file in the root directory and add the following lines
 
 ```sh
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-DB_HOST=your_host
-DB_NAME=educational_platform
-DB_PORT=your_port
+POSTGRESQL_USER=your_username
+POSTGRESQL_PASSWORD=your_password
+POSTGRESQL_HOST=your_host
+POSTGRESQL_DATABASE=educational_platform
+POSTGRESQL_PORT=your_port
 ```
 
 5. Run the application

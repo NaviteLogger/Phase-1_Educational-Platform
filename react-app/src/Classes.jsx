@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class ClassInput extends Component {
     //Some code goes here
-}
 
-// The same as above can be written as
+    //Each class requires a constructor
+    constructor(props) {
+        super(props);
+        this.state = { value: '' };
+    }
+}

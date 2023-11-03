@@ -8,6 +8,16 @@ class ClassInput extends Component {
         super(props);
         this.state = { value: '' };
     }
+
+    //Each class requires a render function
+    render() {
+        return (
+            <div>
+                <input type="text" value={this.state.value} onChange={this.handleChange} />
+                <p>{this.state.value}</p>
+            </div>
+        );
+    }
 }
 
 export default ClassInput;

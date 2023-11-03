@@ -9,3 +9,5 @@ class ClassInput extends Component {
         this.state = { value: '' };
     }
 }
+
+export default ClassInput;

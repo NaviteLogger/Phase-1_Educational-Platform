@@ -54,5 +54,4 @@ class ClassInput extends Component {
     }
 }
 
-
 export default ClassInput;

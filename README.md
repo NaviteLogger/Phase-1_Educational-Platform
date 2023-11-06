@@ -101,7 +101,13 @@ npm start
 
 ## Usage
 
-1. Open your browser and go to `http://localhost:5000/`
+1. Run the backend flask server
+
+```sh
+python run.py
+```
+
+2. Open your browser and go to `http://localhost:5000/`
 
 ## Contributing
 

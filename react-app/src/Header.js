@@ -8,9 +8,9 @@ function Header() {
             <div className="logo">Tu dajemy logo</div>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/courses">Courses</a></li>
-                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/">Chata</a></li>
+                    <li><a href="/courses">Kursy</a></li>
+                    <li><a href="/about">O nas</a></li>
                 </ul>
             </nav>
         </header>

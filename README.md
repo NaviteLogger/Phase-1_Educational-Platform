@@ -26,6 +26,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/download/)
+- [npm](https://www.npmjs.com/get-npm)
 - [Python](https://www.python.org/downloads/)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/)
 - [PostgreSQL](https://www.postgresql.org/download/)

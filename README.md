@@ -96,7 +96,7 @@ npm install
 ```
 
 ```sh
-npm start
+npm run
 ```
 
 ## Usage

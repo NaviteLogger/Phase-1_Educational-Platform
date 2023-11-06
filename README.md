@@ -35,6 +35,24 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
+0. Virtual environment (optional)
+
+```sh
+pip install virtualenv
+```
+
+```sh
+virtualenv venv
+```
+
+```sh
+source venv/bin/activate (for Linux)
+```
+  
+```sh
+venv\Scripts\activate (for Windows)
+```
+
 1. Clone the repo
 
 ```sh
@@ -47,7 +65,7 @@ git clone https://github.com/NaviteLogger/EducationalPlatform.git
 pip install -r requirements.txt
 ```
 
-3. Create a database
+3. Create a database in PostgreSQL (optional)
 
 ```sh
 psql -U your_username
@@ -67,10 +85,18 @@ POSTGRESQL_DATABASE=educational_platform
 POSTGRESQL_PORT=your_port
 ```
 
-5. Run the application
+5. Frontend setup
 
 ```sh
-python run.py
+cd react-app
+```
+
+```sh
+npm install
+```
+
+```sh
+npm start
 ```
 
 ## Usage

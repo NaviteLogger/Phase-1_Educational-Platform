@@ -1,1 +1,0 @@
-# The __init__.py file is required to treat the courses directory as a Python package.

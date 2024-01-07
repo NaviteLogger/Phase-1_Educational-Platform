@@ -1,5 +1,4 @@
-from flask import Blueprint, render_template, current_app, request, jsonify, session
-import requests
+from flask import Blueprint, render_template
 
 
 main_bp = Blueprint("main_bp", __name__)
